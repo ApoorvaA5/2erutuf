@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ImpactStat from './ImpactStat';
-import { impactStats } from './ImpactData';
+import { impactStats } from './impactData';
 
 const ImpactSection = () => {
   return (
@@ -42,5 +42,6 @@ const ImpactSection = () => {
     </section>
   );
 };
+
 
 export default ImpactSection;

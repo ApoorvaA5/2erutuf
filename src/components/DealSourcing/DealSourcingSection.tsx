@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DealCard } from './DealCard';
 import { dealCategories } from './data';
 import GradientText from '../common/GradientText';
 
@@ -22,13 +21,33 @@ export const DealSourcingSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="space-y-12">
           {dealCategories.map((category, index) => (
-            <DealCard
+            <motion.div
               key={category.id}
-              {...category}
-              index={index}
-            />
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="relative bg-white rounded-2xl shadow-lg p-8 hover:bg-gray-50 transition-all duration-300"
+            >
+              <div
+                className={`absolute top-0 left-0 w-full h-2 rounded-t-2xl bg-gradient-to-r ${category.gradient}`}
+              ></div>
+              <div className="flex items-center space-x-6">
+                <div
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center`}
+                >
+                  <category.icon className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600">{category.description}</p>
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
