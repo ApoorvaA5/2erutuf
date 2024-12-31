@@ -10,7 +10,7 @@ export function Header() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1547573854-74d2a71d0826?auto=format&fit=crop&q=80&w=1920")',
+          backgroundImage: 'url("https://t4.ftcdn.net/jpg/08/90/87/75/360_F_890877562_Q2I8qI2XydAAm7tO7OxFgAGMRAShtfxC.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
