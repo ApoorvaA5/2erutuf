@@ -24,7 +24,7 @@ const SignupModal: React.FC<SignupModalProps> = ({ isOpen, onClose }) => {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed left-1/2 top-[40vh] -translate-x-1/2 -translate-y-1/2 w-full max-w-md z-50"
+            className="fixed inset-0 flex items-center justify-center z-50"
           >
             <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 relative border border-white/20">
               <button
