@@ -29,13 +29,18 @@ const LogoSlider = () => {
           <SwiperSlide key={company.id}>
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center justify-center p-4"
+              className="flex flex-col items-center justify-center p-4"
             >
+              {/* Company Logo */}
               <img
                 src={company.logo}
                 alt={company.name}
                 className="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
               />
+              {/* Company Name */}
+              <p className="mt-2 text-sm font-medium text-gray-700 text-center">
+                {company.name}
+              </p>
             </motion.div>
           </SwiperSlide>
         ))}
