@@ -31,12 +31,19 @@ const LogoSlider = () => {
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center justify-center p-4"
             >
-              {/* Company Logo */}
-              <img
-                src={company.logo}
-                alt={company.name}
-                className="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
-              />
+              {/* Company Logo with Link */}
+              <a
+                href={company.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </a>
               {/* Company Name */}
               <p className="mt-2 text-sm font-medium text-gray-700 text-center">
                 {company.name}
@@ -50,3 +57,4 @@ const LogoSlider = () => {
 };
 
 export default LogoSlider;
+
