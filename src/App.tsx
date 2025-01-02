@@ -13,6 +13,7 @@ import BlogSection from './components/Blog/BlogSection';
 import Footer from './components/Footer/Footer';
 import InnovatorPage from './pages/InnovatorPage';
 import InvestorPage from './pages/InvestorPage';
+
 import './styles/animations.css';
 
 const App = () => {
@@ -40,6 +41,9 @@ const App = () => {
           <Route path="/partner" element={<InvestorPage />} />
         </Routes>
         <Footer />
+
+            {/* Signup Modal */}
+    
       </div>
     </Router>
   );

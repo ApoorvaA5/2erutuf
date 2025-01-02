@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Brain } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import NavLink from './NavLink';
 import LoginButton from './LoginButton';
 import SignupButton from './SignupButton';
 import LoginModal from '../auth/LoginModal';
 import SignupModal from '../auth/SignupModal';
+import Logo from '../common/Logo';
 import { scrollToElement } from '../../utils/scroll';
 
 const Navbar = () => {
@@ -25,8 +26,8 @@ const Navbar = () => {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    if (href === '#blog' && location.pathname === '/') {
-      scrollToElement('blog-section');
+    if (href.startsWith('#') && location.pathname === '/') {
+      scrollToElement(href.slice(1));
     }
   };
 
@@ -41,15 +42,12 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-white/30 backdrop-blur-sm'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <Brain className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Future Minds
-              </span>
+            <Link to="/" className="flex-shrink-0">
+              <Logo size="md" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -106,6 +104,7 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Modals */}
       <LoginModal 
         isOpen={isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
