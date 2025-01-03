@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
@@ -13,18 +13,20 @@ import BlogSection from './components/Blog/BlogSection';
 import Footer from './components/Footer/Footer';
 import InnovatorPage from './pages/InnovatorPage';
 import InvestorPage from './pages/InvestorPage';
-
+import SignupModal from './components/auth/SignupModal';
 import './styles/animations.css';
 
 const App = () => {
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+
   return (
     <Router>
       <div className="min-h-screen">
-        <Navbar />
+        <Navbar  onOpenSignup={() => setIsSignupModalOpen(true)} />
         <Routes>
           <Route path="/" element={
             <>
-              <Header />
+              <Header  onOpenSignup={() => setIsSignupModalOpen(true)}  />
               <main className="bg-gradient-to-b from-white to-gray-50">
                 <WhyFutureMindsSection />
                 <InvestmentProcessSection />
@@ -43,6 +45,11 @@ const App = () => {
         <Footer />
 
             {/* Signup Modal */}
+              {/* Signup Modal */}
+        <SignupModal 
+          isOpen={isSignupModalOpen}
+          onClose={() => setIsSignupModalOpen(false)}
+        />
     
       </div>
     </Router>

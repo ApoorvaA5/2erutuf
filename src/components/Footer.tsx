@@ -56,7 +56,7 @@ export function Footer() {
 
           {/* Store */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Store</h3>
+            <h3 className="font-semibold text-gray -900 mb-4">Store</h3>
             <ul className="space-y-3">
               <li><a href="#" className="text-sm text-gray-600 hover:text-orange-500">Store Locator</a></li>
               <li><a href="#" className="text-sm text-gray-600 hover:text-orange-500">Classes & Events</a></li>
