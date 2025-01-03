@@ -5,18 +5,19 @@ import { FooterLink } from './types';
 interface FooterLinksProps {
   title: string;
   links: FooterLink[];
+  titleClass?: string;
 }
 
-const FooterLinks: React.FC<FooterLinksProps> = ({ title, links }) => {
+const FooterLinks: React.FC<FooterLinksProps> = ({ title, links, titleClass = "text-white" }) => {
   return (
     <div>
-      <h3 className="font-semibold text-gray-900 mb-4">{title}</h3>
+      <h3 className={`font-semibold ${titleClass} mb-4`}>{title}</h3>
       <ul className="space-y-3">
         {links.map((link) => (
           <li key={link.label}>
-            <Link 
+            <Link
               to={link.href}
-              className="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300"
+              className="text-sm text-gray-300 hover:text-blue-500 transition-colors duration-300"
             >
               {link.label}
             </Link>
