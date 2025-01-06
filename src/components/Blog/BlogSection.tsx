@@ -7,7 +7,8 @@ import GradientText from '../common/GradientText';
 
 const BlogSection = () => {
   return (
-    <section id="blog-section" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+<section id="blog-section" className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {[...Array(3)].map((_, i) => (

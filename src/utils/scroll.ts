@@ -1,4 +1,5 @@
-// Utility function for smooth scrolling to elements
+
+//Utility function for smooth scrolling to elements
 export const scrollToElement = (elementId: string) => {
     const element = document.getElementById(elementId);
     if (element) {
