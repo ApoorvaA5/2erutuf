@@ -35,12 +35,7 @@ export const companyLogos = [
     logo: 'https://brightwayscrap.com/wp-content/uploads/2022/04/BWST-LOGO-1-1.png',
     link: 'https://brightwayscrap.com/',
   },
-  {
-    id: 7,
-    name: 'Clegant',
-    logo: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=200&h=100&q=80',
-    link: 'https://clegant.com/',
-  },
+ 
   {
     id: 8,
     name: 'K12 The School Planners',
