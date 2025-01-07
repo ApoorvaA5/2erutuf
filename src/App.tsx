@@ -14,6 +14,7 @@ import Footer from './components/Footer/Footer';
 import InnovatorPage from './pages/InnovatorPage';
 import InvestorPage from './pages/InvestorPage';
 import SignupModal from './components/auth/SignupModal';
+import ScrollToTop  from "./utils/scroll";
 import './styles/animations.css';
 
 const App = () => {
@@ -21,36 +22,38 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop /> {/* Ensure ScrollToTop is here */}
       <div className="min-h-screen">
-        <Navbar  onOpenSignup={() => setIsSignupModalOpen(true)} />
+        <Navbar onOpenSignup={() => setIsSignupModalOpen(true)} />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Header  onOpenSignup={() => setIsSignupModalOpen(true)}  />
-              <main className="bg-gradient-to-b from-white to-gray-50">
-                <WhyFutureMindsSection />
-                <InvestmentProcessSection />
-                <ImpactSection />
-                <DealSourcingSection />
-                <TestimonialsSection />
-                <InvestmentPhilosophy />
-                <SignupCTA />
-                <BlogSection />
-              </main>
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>
+                <Header onOpenSignup={() => setIsSignupModalOpen(true)} />
+                <main className="bg-gradient-to-b from-white to-gray-50">
+                  <WhyFutureMindsSection />
+                  <InvestmentProcessSection />
+                  <ImpactSection />
+                  <DealSourcingSection />
+                  <TestimonialsSection />
+                  <InvestmentPhilosophy />
+                  <SignupCTA />
+                  <BlogSection />
+                </main>
+              </>
+            }
+          />
           <Route path="/innovate" element={<InnovatorPage />} />
           <Route path="/partner" element={<InvestorPage />} />
         </Routes>
         <Footer />
 
-            {/* Signup Modal */}
-              {/* Signup Modal */}
-        <SignupModal 
+        {/* Signup Modal */}
+        <SignupModal
           isOpen={isSignupModalOpen}
           onClose={() => setIsSignupModalOpen(false)}
         />
-    
       </div>
     </Router>
   );

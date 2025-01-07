@@ -1,11 +1,20 @@
+// utils/scroll.ts
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-//Utility function for smooth scrolling to elements
-export const scrollToElement = (elementId: string) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, [pathname]);
+
+  return null;
+};
+
+export default ScrollToTop;
+
+
+
+
+
