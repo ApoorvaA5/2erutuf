@@ -7,7 +7,7 @@ const Background = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")',
+          backgroundImage: 'url("https://media.gettyimages.com/id/2170886075/photo/close-up-on-hands-filming-chicago.jpg?s=612x612&w=0&k=20&c=CBJYmUo7kMHmrNr7bGP7Vm8U1cKPjIfrZnkGNZlihUQ=")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
