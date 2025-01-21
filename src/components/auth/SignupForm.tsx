@@ -41,7 +41,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
             />
             <span className={`px-4 py-2 rounded-full cursor-pointer transition-all ${
               formData.userType === 'investor' 
-                ? 'bg-blue-600 text-white' 
+                ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}>
               I'm an Investor
@@ -58,7 +58,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
             />
             <span className={`px-4 py-2 rounded-full cursor-pointer transition-all ${
               formData.userType === 'entrepreneur' 
-                ? 'bg-blue-600 text-white' 
+                ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}>
               I'm an Entrepreneur
@@ -75,7 +75,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
             id="fullName"
             value={formData.fullName}
             onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             required
           />
         </div>
@@ -89,7 +89,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
             id="email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             required
           />
         </div>
@@ -103,7 +103,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
             id="password"
             value={formData.password}
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             required
           />
         </div>
@@ -112,14 +112,14 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
           <input
             type="checkbox"
             id="terms"
-            className="rounded border-gray-300 text-blue-600"
+            className="rounded border-gray-300 text-orange-600"
             required
           />
           <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
             I agree to the{' '}
-            <a href="/terms" className="text-blue-600 hover:text-blue-700">Terms</a>
+            <a href="/terms" className="text-orange-600 hover:text-orange-700">Terms</a>
             {' '}and{' '}
-            <a href="/privacy" className="text-blue-600 hover:text-blue-700">Privacy Policy</a>
+            <a href="/privacy" className="text-orange-600 hover:text-orange-700">Privacy Policy</a>
           </label>
         </div>
 
@@ -127,7 +127,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group"
+          className="w-full py-3 px-4 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group"
         >
           Create Account
           <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -136,7 +136,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ onClose }) => {
 
       <div className="text-center text-sm text-gray-600">
         Already have an account?{' '}
-        <button className="text-blue-600 hover:text-blue-700 font-medium">
+        <button className="text-orange-600 hover:text-orange-700 font-medium">
           Sign in
         </button>
       </div>

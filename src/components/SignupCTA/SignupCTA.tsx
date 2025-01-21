@@ -13,18 +13,18 @@ const SignupCTA = () => {
           <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0 }}
-            animate={{ 
+            animate={{
               opacity: [0.1, 0.3, 0.1],
               scale: [1, 1.2, 1],
               x: [0, Math.random() * 100 - 50, 0],
-              y: [0, Math.random() * 100 - 50, 0]
+              y: [0, Math.random() * 100 - 50, 0],
             }}
             transition={{
               duration: 10 + Math.random() * 10,
               repeat: Infinity,
-              delay: Math.random() * 5
+              delay: Math.random() * 5,
             }}
-            className="absolute rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10"
+            className="absolute rounded-full bg-gradient-to-br from-orange-500/10 to-red-500/10"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -45,11 +45,11 @@ const SignupCTA = () => {
           {/* Floating Sparkles Icon */}
           <motion.div
             animate={{ y: [-10, 10] }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+            transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
             className="inline-block mb-6"
           >
-            <div className="p-3 bg-blue-100 rounded-full">
-              <Sparkles className="h-6 w-6 text-blue-600" />
+            <div className="p-3 bg-orange-100 rounded-full">
+              <Sparkles className="h-6 w-6 text-orange-500" />
             </div>
           </motion.div>
 
@@ -58,25 +58,19 @@ const SignupCTA = () => {
             <GradientText>India-based</GradientText>{' '}
             innovators and investors
           </h2>
-          
+
           <p className="text-xl text-gray-600 mb-12">
-            Future Minds helps innovators and investors in India facilitate lasting 
+            Future Minds helps innovators and investors in India facilitate lasting
             and profitable relationships that build better businesses and brighter futures
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <AnimatedButton 
-              href="/partner"
-              variant="primary"
-            >
+            <AnimatedButton href="/partner" variant="primary">
               Sign up as an investor
               <ArrowRight className="ml-2 h-5 w-5" />
             </AnimatedButton>
 
-            <AnimatedButton 
-              href="/innovate"
-              variant="secondary"
-            >
+            <AnimatedButton href="/innovate" variant="secondary">
               Sign up for innovators
               <ArrowRight className="ml-2 h-5 w-5" />
             </AnimatedButton>

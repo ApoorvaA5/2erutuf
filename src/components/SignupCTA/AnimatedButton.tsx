@@ -9,30 +9,25 @@ interface AnimatedButtonProps {
 }
 
 const AnimatedButton: React.FC<AnimatedButtonProps> = ({ children, href, variant }) => {
-  const baseClasses = "px-8 py-4 rounded-full font-semibold inline-flex items-center group relative overflow-hidden";
-  
+  const baseClasses =
+    'px-8 py-4 rounded-full font-semibold inline-flex items-center group relative overflow-hidden';
+
   const variantClasses = {
-    primary: "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg",
-    secondary: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
+    primary: 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:shadow-lg',
+    secondary: 'border-2 border-orange-600 text-orange-600 hover:bg-orange-50',
   };
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <Link 
-        to={href}
-        className={`${baseClasses} ${variantClasses[variant]}`}
-      >
+    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      <Link to={href} className={`${baseClasses} ${variantClasses[variant]}`}>
         {variant === 'primary' && (
           <motion.span
-            initial={{ x: "100%" }}
-            animate={{ x: "-100%" }}
-            transition={{ 
+            initial={{ x: '100%' }}
+            animate={{ x: '-100%' }}
+            transition={{
               repeat: Infinity,
               duration: 1.5,
-              ease: "linear"
+              ease: 'linear',
             }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
           />
@@ -42,7 +37,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({ children, href, variant
             initial={{ scale: 0, opacity: 0 }}
             whileHover={{ scale: 20, opacity: 0.1 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 rounded-full bg-blue-600"
+            className="absolute inset-0 rounded-full bg-orange-600"
             style={{ originX: 0.5, originY: 0.5 }}
           />
         )}

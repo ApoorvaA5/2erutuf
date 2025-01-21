@@ -34,7 +34,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             required
           />
         </div>
@@ -48,17 +48,17 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             required
           />
         </div>
 
         <div className="flex items-center justify-between">
           <label className="flex items-center">
-            <input type="checkbox" className="rounded border-gray-300 text-blue-600" />
+            <input type="checkbox" className="rounded border-gray-300 text-orange-600" />
             <span className="ml-2 text-sm text-gray-600">Remember me</span>
           </label>
-          <button type="button" className="text-sm text-blue-600 hover:text-blue-700">
+          <button type="button" className="text-sm text-orange-600 hover:text-orange-700">
             Forgot password?
           </button>
         </div>
@@ -67,7 +67,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group"
+          className="w-full py-3 px-4 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center group"
         >
           Sign In
           <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -76,7 +76,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
 
       <div className="text-center text-sm text-gray-600">
         Don't have an account?{' '}
-        <button className="text-blue-600 hover:text-blue-700 font-medium">
+        <button className="text-orange-600 hover:text-orange-700 font-medium">
           Sign up
         </button>
       </div>
