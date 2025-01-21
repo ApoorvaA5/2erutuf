@@ -19,12 +19,14 @@ const Header: React.FC<HeaderProps> = ({ onOpenSignup }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Innovate
-            </span>{' '}
-            with Future Minds
-          </h1>
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+  <span className="bg-gradient-to-r from-yellow-600 to-red-600 bg-clip-text text-transparent">
+    Innovate with Future Minds
+  </span>
+</h1>
+
+
+
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto">
             Empowering the next generation of technological breakthroughs
           </p>
@@ -36,15 +38,16 @@ const Header: React.FC<HeaderProps> = ({ onOpenSignup }) => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={onOpenSignup}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:shadow-lg transition-all duration-300 flex items-center group"
-          >
-            Get Started
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.button>
+         <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={onOpenSignup}
+  className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full hover:shadow-lg transition-all duration-300 flex items-center group"
+>
+  Get Started
+  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+</motion.button>
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
